@@ -3,18 +3,13 @@ console.log(panels);
 
 panels.forEach((panel) => {
   panel.addEventListener("click", () => {
-    console.log("muieMie");
+    panel.classList.add("active");
+    withoutActives();
   });
 });
 
-function removeActiveClasses() {
+const withoutActives = function () {
   panels.forEach((panel) => {
-    panel.classList.remove(".active");
+    panel.classList.remove("active");
   });
-}
-
-// panels.forEach((panel) => {
-//   panel.addEventListener("click", () => {
-//     console.log("muie");
-//   });
-// });
+};
